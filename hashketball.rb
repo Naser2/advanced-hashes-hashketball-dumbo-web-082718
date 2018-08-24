@@ -215,3 +215,10 @@ def player_numbers(team_name)
      end 
 end 
 # puts players_number("Brooklyn Nets")
+
+def player_stats(player_name)
+ details = players.find {|p | p.fetch(:player_name) == player_name}
+  details.delete_if {|info, string| info == :player_name}
+end
+
+puts player_stats("Alan Anderson")
