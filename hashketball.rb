@@ -212,6 +212,13 @@ puts " _____________Number____________"
 def player_numbers(team_name)
    numbers = [] 
    p get_players = call_team(team_name)[:players].map { |player| player.fetch(:number).to_i }
+   
+   
+     hash.each do |key, value|
+       #JJJJJJ
+     end 
+     
+     hash[]
   # get_numbers = call_team(team_name).find { |player_name| player_name.fetch(:number) == }
      
    
