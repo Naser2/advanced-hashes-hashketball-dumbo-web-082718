@@ -209,8 +209,8 @@ end
 puts shoe_size("DeSagna Diop")
 
 puts " _____________Number____________"
-def players_number(team_name)
-   get_number = call_team(team_name).find do|team|team.fetch(:team_name) == team_name_name
+def player_numbers(team_name)
+    get_number = call_team(team_name).find do| player_name |team.fetch(:team_name) == team_name
      end 
      number =  get_number.fetch(:number)
      puts "#{team_name} number is: #{number}"
