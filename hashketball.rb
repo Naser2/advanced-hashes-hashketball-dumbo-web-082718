@@ -213,7 +213,6 @@ def player_numbers(team_name)
    numbers = [] 
    p get_players = call_team(team_name)[:players].map { |player| player.fetch(:number).to_i }
      end 
-end 
 # puts players_number("Brooklyn Nets")
 
 
