@@ -144,10 +144,10 @@ puts teams_and_players
 # # puts get_teams
 puts "_____________TEAMS NAMES _______________'\n'"
 
-def teams_names
+def team_names
   teams_and_players.map{|team| team.fetch(:team_name)}
 end
- puts  teams_names
+ puts  team_names
 
 
 
@@ -155,7 +155,7 @@ puts "______CALL TEAM BY NAME  ________________"
 #CALL EACH TEAM (by name)
 def call_team(team_name)
 	  game_hash.values.find do |players_info|
-	    players_info[:team_name] == team_name
+	  players_info[:team_name] == team_name
 	  end
 end
 
@@ -174,12 +174,12 @@ puts all_players_with_stats
 
 puts "__________TEAM COLOR___________________'\n'"
 #Get team color by accessing specific team(call_team then team name store in a variable to then use and fetch)
-def team_color(team_name)
-get_color = call_team(team_name) {|team_name|team_name.fetch(:team_name) == team_name}
+def team_colors(team_name)
+ get_color = call_team(team_name) {|team_name|team_name.fetch(:team_name) == team_name}
  get_color.fetch(:colors)
 
  end 
- puts team_color("Brooklyn Nets")
+ puts team_colors("Brooklyn Nets")
 
 #WITHOUT  Iteratting Just accessing 
 # def players
@@ -191,22 +191,32 @@ get_color = call_team(team_name) {|team_name|team_name.fetch(:team_name) == team
 #____________________________________________
  #ITTERATING WITH FIND (can also use detect)
 def num_points_scored(name)
-  get_player = all_players_with_stats.find {|player| player.fetch(:player_name) == name }
-   get_player.fetch(:points)
+  get_player = all_players_with_stats.find { |player| player.fetch(:player_name) == name }
+   get_player.fetch(:points).to_i
   # puts "#{name} points: #{points}"
 end 
 puts "__________FIND PLAYER SCORE ______________'\n'"
-puts num_points_scored("Brendan Haywood")
+puts num_points_scored("Jeff Adrien")
 
 puts "__________SHOE SIZE  ______________'\n'"
 def shoe_size(player_name)
     get_shoe = all_players_with_stats.find do|player|player.fetch(:player_name) == player_name
      end 
-     get_shoe.fetch(:shoe)
+     get_shoe.fetch(:shoe).to_i
     # puts "#{player_name} shoe size is: #{shoe}"
     # return get_shoe.fetch(:shoe)
 end 
 puts shoe_size("DeSagna Diop")
+
+puts " _____________Number____________"
+def players_number(team_name)
+   get_number = call_team(team_name).find do|team|team.fetch(:team_name) == team_name_name
+     end 
+     number =  get_number.fetch(:number)
+     puts "#{team_name} number is: #{number}"
+    # return get_shoe.fetch(:shoe)
+end 
+puts players_number("Brooklyn Nets")
 
 # # def all_teams# using MAP
 
