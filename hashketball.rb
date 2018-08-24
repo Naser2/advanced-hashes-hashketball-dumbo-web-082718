@@ -219,7 +219,7 @@ end
 
 #____________________________________________
 def player_stats(player_name)
- details = players.find {|p | p.fetch(:player_name) == player_name}
+  details = players.find {|player | player.fetch(:player_name) == player_name}
   details.delete_if {|info, string| info == :player_name}
 end
 
