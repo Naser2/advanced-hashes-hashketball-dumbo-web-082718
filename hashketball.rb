@@ -211,6 +211,7 @@ puts shoe_size("DeSagna Diop")
 puts " _____________Number____________"
 def player_numbers(team_name)
    numbers = [] 
+   get_numbers = call_team(team_name)
    
 end 
 # puts players_number("Brooklyn Nets")
