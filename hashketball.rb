@@ -216,7 +216,7 @@ def player_numbers(team_name)
 # puts players_number("Brooklyn Nets")
 
 
-#____________________________________________
+puts " ____________________PLAYER STATS _______________________"
 def player_stats(player_name)
   details = players.find {|player | player.fetch(:player_name) == player_name}
   details.delete_if {|info, string| info == :player_name}
