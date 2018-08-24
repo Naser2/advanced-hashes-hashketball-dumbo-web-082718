@@ -219,7 +219,7 @@ def player_numbers(team_name)
 puts " ____________________PLAYER STATS _______________________"
 def player_stats(player_name)
   details = all_players_with_stats.find {|player | player.fetch(:player_name) == player_name}
-  details.delete_if {|info, string| info == :player_name}
+  details.map {|info| info == :player_name}
 end
 
 puts player_stats("Alan Anderson")
