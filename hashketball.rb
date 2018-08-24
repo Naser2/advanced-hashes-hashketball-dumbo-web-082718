@@ -219,7 +219,7 @@ def player_numbers(team_name)
 puts " ____________________PLAYER STATS _______________________"
 def player_stats(player_name)
   details = all_players_with_stats.find {|player | player.fetch(:player_name) == player_name}
-  details.fetch(:colors, :shoe } 
+  details.fetch(:colors, :shoe)
 end
 
 puts player_stats("Alan Anderson")
