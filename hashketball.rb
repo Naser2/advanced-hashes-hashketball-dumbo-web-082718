@@ -216,7 +216,7 @@ def players_number(team_name)
      puts "#{team_name} number is: #{number}"
     # return get_shoe.fetch(:shoe)
 end 
-puts players_number("Brooklyn Nets")
+# puts players_number("Brooklyn Nets")
 
 # # def all_teams# using MAP
 
