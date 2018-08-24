@@ -210,37 +210,7 @@ puts shoe_size("DeSagna Diop")
 
 puts " _____________Number____________"
 def player_numbers(team_name)
-    get_number = call_team(team_name).find do| player_name |team.fetch(:team_name) == team_name
-     end 
-     number =  get_number.fetch(:number)
-     puts "#{team_name} number is: #{number}"
-    # return get_shoe.fetch(:shoe)
+   numbers = [] 
+   
 end 
 # puts players_number("Brooklyn Nets")
-
-# # def all_teams# using MAP
-
-# #   game_hash.map do |team, names| names[:team_name]
-# #   # names.each do |name, info| name == [:team_name].concat([:players]) 
-# #    end
-# #   # end 
-# # end 
-# # # puts all_teams
-# # #______________BOTH TEAMS ___________________#
-
-
-
-# #CALLING EACH TEAM BY ACCESSING HASH
-# def home
-# 	  game_hash[:home][:team_name]
-# 	end
-#   # puts home
-# # #_________________________________#
-# # def away
-# # 	  game_hash[:away][:team_name]
-# # 	end
-# # #  puts away
-# # #_________________________________#
-
-
-
